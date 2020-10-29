@@ -13,7 +13,7 @@ library(ggmap)
 register_google(key = "PutYourOwnKeyHere")
 
 # Set working directory 
-setwd("/home/rpodeschi/Dropbox/R-Projects/maps/data/")
+setwd("/home/username/R-Projects/maps/data/")
 
 # Let's look at the location of all the Chipotle stores
 # Data Source: https://www.kaggle.com/jeffreybraun/chipotle-locations
