@@ -10,7 +10,7 @@ library(tidyverse)
 library(ggmap)
 
 # Reiger Google API Key for use with ggmap
-register_google(key = "AIzaSyCk5aFK-MURmiZKVapdbabOqfE-ce3LBuE")
+register_google(key = "PutYourOwnKeyHere")
 
 # Set working directory 
 setwd("/home/rpodeschi/Dropbox/R-Projects/maps/data/")
