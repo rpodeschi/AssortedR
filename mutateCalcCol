@@ -1,0 +1,11 @@
+# add calculated columns
+airlinenew <- airline %>% mutate(ArrDelayType = ifelse(airline$ArrDelayMinutes >= 30, "big delay", "small delay"))
+
+# add calcluated column for time of day
+airlinenew <- airline %>% mutate(TimeOfDay = ifelse(airline$DepTime >= 400 & airline$DepTime < 1000, "Early Morning", 
+                                                  ifelse(airline$DepTime >= 1000, "Mid Morning",
+                                                  ifelse(airline$DepTime >= 1300, "Early Afternoon",
+                                                  ifelse(airline$DepTime >= 1700, "Evening","Oops")))))
+
+# Get difference between CRS elapsed time and actual air time
+airlinenew <- airline %>% mutate(ElapsedDiff = airline$CRSElapsedTime - airline$ActualElapsedTime)
