@@ -1,0 +1,11 @@
+# Importing CSVs into R
+#
+#
+#
+
+# In Windows, use the format "C:\\users\username\R-Projects\\airline\\jan19airline.csv"
+jan19 <- read.csv("/home/username/R-Projects/airline/jan19airline.csv")
+feb19 <- read.csv("/home/username/R-Projects/airline/feb19airline.csv")
+
+# Use rbind to combine data frames into one larger data frame
+airline <- rbind(jan19, feb19)
